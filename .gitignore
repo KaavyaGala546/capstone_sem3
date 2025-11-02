@@ -1,0 +1,47 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Build output
+dist/
+build/
+coverage/
+.cache/
+.turbo/
+.next/
+out/
+
+# Next.js (any subfolder)
+**/.next/
+**/out/
+
+# Env files (keep examples)
+.env
+.env.*
+!.env.example
+
+# Client envs
+client/.env.local
+client/.env.*.local
+
+# Server envs
+server/.env
+server/.env.*
+
+# Editor
+.vscode/
+*.swp
+
+# OS
+Thumbs.db
