@@ -6,7 +6,7 @@ const User = require('../models/User');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'changeme';
 
-// POST /api/auth/signup
+ 
 router.post('/signup', async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -17,11 +17,18 @@ router.post('/signup', async (req, res) => {
     const existing = await User.findOne({ email });
     if (existing) return res.status(409).json({ message: 'User already exists' });
 
-    const saltRounds = 10;
-    const hashed = await bcrypt.hash(password, saltRounds);
+   const saltRounds = parseInt(process.env.SALT_ROUNDS || '10', 10);
 
-    const user = new User({ name, email, password: hashed });
-    await user.save();
+   console.time('signup:hash');
+  const hashed = await bcrypt.hash(password, saltRounds);
+  console.timeEnd('signup:hash');
+
+  const user = new User({ name, email, password: hashed });
+  console.time('signup:save');
+  await user.save();
+  console.timeEnd('signup:save');
+
+   console.log('signup:completed', { email: user.email, id: user._id });
 
     const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, { expiresIn: '7d' });
 

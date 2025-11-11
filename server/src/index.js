@@ -9,8 +9,7 @@ const PORT = process.env.PORT || 5000;
 async function main() {
   const app = express();
 
-  // CORS for all routes + explicit preflight handling to avoid 405 on OPTIONS
-  const allowedOrigins = [
+   const allowedOrigins = [
     'http://localhost:3000',
     'https://capstone3-lemon.vercel.app'
   ];
@@ -35,6 +34,8 @@ async function main() {
   }
 
   app.use('/api/auth', authRoutes);
+
+  app.get('/health', (req, res) => res.status(200).send('ok'));
 
   app.get('/', (req, res) => res.send('CineScope server is running'));
 
