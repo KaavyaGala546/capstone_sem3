@@ -19,7 +19,7 @@ export default function RegisterPage() {
     setLoading(true);
     try {
   // Default to deployed API if env not set
-  const base = process.env.NEXT_PUBLIC_API_URL || 'https://capstone3-6ywq.onrender.com';
+  const base = process.env.NEXT_PUBLIC_API_URL || '';
       const res = await axios.post(`${base}/api/auth/signup`, { name, email, password });
       const { token, user } = res.data;
       if (token) {
@@ -38,23 +38,17 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen relative bg-black">
-      {/* Background Image */}
-      <div className="absolute h-screen inset-0 opacity-50">
-        <img src="https://images.pexels.com/photos/1649683/pexels-photo-1649683.jpeg" alt="Background" className="object-cover w-full h-full" />
-      </div>
-      {/* Header */}
-      <div className="relative z-10 px-4 md:px-12 py-6">
-        <a href="/" className="text-3xl font-bold text-red-600">CINESCOPE</a>
-      </div>
+       
+      
 
       {/* Register Form */}
-      <div className="relative z-10 flex items-center justify-center px-4 py-0">
+      <div className="relative z-10 flex items-center  justify-center px-4 py-0">
         <div className="w-full max-w-md">
           <div className="bg-black/75 backdrop-blur-sm rounded-lg p-10 md:p-14">
             <h1 className="text-3xl font-bold text-white mb-2">Sign Up</h1>
             <p className="text-gray-400 text-sm mb-8">Create your account to get started</p>
             
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5  ">
               {error && (
                 <div className="bg-orange-600/90 text-white text-sm p-3 rounded">
                   {error}
@@ -114,7 +108,7 @@ export default function RegisterPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Creating account...' : 'Sign Up'}
               </button>

@@ -108,7 +108,7 @@ export default function Nav() {
                         </a>
                         <button
                           onClick={handleLogout}
-                          className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm rounded transition"
+                          className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded transition"
                         >
                           Sign Out
                         </button>
@@ -121,7 +121,7 @@ export default function Nav() {
           ) : (
             <>
               <a href="/login" className="px-4 py-2 text-white hover:text-gray-300 transition text-sm font-medium">Sign In</a>
-              <a href="/register" className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-semibold rounded transition">Join Now</a>
+              <a href="/register" className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded transition">Join Now</a>
             </>
           )}
         </div>

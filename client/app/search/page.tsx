@@ -44,7 +44,7 @@ function SearchContent() {
           </div>
           <button
             type="submit"
-            className="absolute right-2 top-2 bottom-2 px-5 rounded-lg bg-red-600 hover:bg-red-700 font-semibold"
+            className="absolute right-2 top-2 bottom-2 px-5 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold"
           >
             Search
           </button>

@@ -38,20 +38,9 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen relative bg-black">
       {/* Bg Image */}
-      <div className="absolute inset-0 opacity-50">
-        <img
-          src="https://images.pexels.com/photos/1649683/pexels-photo-1649683.jpeg"
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
-      </div>
+      
 
-      {/* Header */}
-      <div className="relative z-10 px-4 md:px-12 py-6">
-        <a href="/" className="text-3xl font-bold text-red-600">CINESCOPE</a>
-      </div>
-
+  
       {/* Login Form */}
       <div className="relative z-10 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">
@@ -111,7 +100,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Signing in...' : 'Sign In'}
               </button>
