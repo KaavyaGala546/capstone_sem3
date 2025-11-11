@@ -17,7 +17,7 @@ const Page = () => {
               Go to Login
             </button>
           </Link>
-          <Link href="/signup">
+          <Link href="/register">
             <button className="px-5 py-2 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition">
               Go to Signup
             </button>
