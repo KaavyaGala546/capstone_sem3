@@ -18,12 +18,12 @@ export default function LoginPage() {
     setLoading(true);
     try {
   // Default to deployed API if env not set
-  const base = process.env.NEXT_PUBLIC_API_URL || 'https://capstone3-6ywq.onrender.com';
+  const base = process.env.NEXT_PUBLIC_API_URL || 'https://capstone-sem3.onrender.com';
       const res = await axios.post(`${base}/api/auth/login`, { email, password });
       const { token, user } = res.data;
       if (token) {
-        localStorage.setItem('cinescope_token', token);
-        localStorage.setItem('cinescope_user', JSON.stringify(user));
+        localStorage.setItem('capstoneProject_token', token);
+        localStorage.setItem('capstoneProject_user', JSON.stringify(user));
         router.push('/');
       } else {
         setError('No token received');
@@ -117,7 +117,7 @@ export default function LoginPage() {
             </form>
 
             <div className="mt-8 text-gray-400 text-base">
-              New to CineScope?{' '}
+              New to capstoneProject?{' '}
               <a href="/register" className="text-white hover:underline font-medium">
                 Sign up now
               </a>

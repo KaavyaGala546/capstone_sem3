@@ -10,7 +10,7 @@ export default function ProfilePage() {
   const [user, setUser] = useState<any>(null);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('cinescope_user');
+    const storedUser = localStorage.getItem('capstoneProject_user');
     if (!storedUser) {
       router.push('/login');
     } else {

@@ -1,6 +1,6 @@
-# CineScope - Express Server
+# capstoneProject - Express Server
 
-This server provides authentication endpoints for the CineScope project (signup / login) using MongoDB, bcrypt, and JWT.
+This server provides authentication endpoints for the capstoneProject project (signup / login) using MongoDB, bcrypt, and JWT.
 
 Quick start:
 

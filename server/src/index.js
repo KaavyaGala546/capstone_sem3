@@ -37,7 +37,7 @@ async function main() {
 
   app.get('/health', (req, res) => res.status(200).send('ok'));
 
-  app.get('/', (req, res) => res.send('CineScope server is running'));
+  app.get('/', (req, res) => res.send('capstoneProject server is running'));
 
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

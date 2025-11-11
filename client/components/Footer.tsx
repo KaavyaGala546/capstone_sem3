@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm mb-4 md:mb-0">© 2025 CineScope. All rights reserved.</p>
+            <p className="text-gray-500 text-sm mb-4 md:mb-0">© 2025 capstoneProject. All rights reserved.</p>
             <p className="text-gray-600 text-xs">This is capstone project</p>
           </div>
         </div>

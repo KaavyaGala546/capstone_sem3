@@ -10,7 +10,7 @@ export default function Nav() {
   const [profileOpen, setProfileOpen] = useState(false);
 
   useEffect(() => {
-    const storedUser = localStorage.getItem('cinescope_user');
+    const storedUser = localStorage.getItem('capstoneProject_user');
     if (storedUser) setUser(JSON.parse(storedUser));
 
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -19,8 +19,8 @@ export default function Nav() {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('cinescope_token');
-    localStorage.removeItem('cinescope_user');
+    localStorage.removeItem('capstoneProject_token');
+    localStorage.removeItem('capstoneProject_user');
     setUser(null);
     router.push('/login');
   };
@@ -38,7 +38,7 @@ export default function Nav() {
     <nav className={`${scrolled ? 'bg-black' : 'bg-gradient-to-b from-black to-transparent'} fixed top-0 w-full z-50 transition-colors duration-300`}>
       <div className="px-4 md:px-12 py-4 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <a href="/" className="text-3xl font-bold text-red-600">CINESCOPE</a>
+          <a href="/" className="text-3xl font-bold text-red-600">capstoneProject</a>
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="text-white hover:text-gray-300 transition text-sm font-medium">Home</a>
             <a href="#" className="text-gray-400 hover:text-gray-300 transition text-sm">Movies</a>
