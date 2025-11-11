@@ -35,7 +35,7 @@ function SearchContent() {
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Search for movies or TV shows..."
-            className="w-full bg-gray-800 border border-gray-700 rounded-xl py-4 pl-12 pr-32 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full bg-gray-800 border border-gray-700 rounded-xl py-4 pl-12 pr-32 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"
           />
           <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
             <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
